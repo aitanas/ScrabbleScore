@@ -41,7 +41,7 @@ namespace ToDoList.Tests
       string result = newItem.Description;
 
       //Assert
-      Assert.AreEqual(updatedDescription, result)
+      Assert.AreEqual(updatedDescription, result);
     }
 
   }
