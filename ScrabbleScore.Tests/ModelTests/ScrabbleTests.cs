@@ -23,6 +23,16 @@ namespace ScrabbleScore.Tests
       Assert.AreEqual(userInput, userWord.UserInput);
     }
     
-    
+    [TestMethod]
+    public void ToCharacterArray_ConvertWordToArray_ArrayObj()
+    {
+      // Arrange
+      string userInput = "word";
+      Scrabble userWord = new Scrabble(userInput);
+      // Act
+      string[] userCharArray = {"w", "o", "r", "d"};
+      //Assert
+      CollectionAssert.AreEqual(userCharArray, userWord.UserCharArray);
+    }
   }
 }
