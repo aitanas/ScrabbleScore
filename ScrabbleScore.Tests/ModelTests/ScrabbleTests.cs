@@ -18,7 +18,7 @@ namespace ScrabbleScore.Tests
     [TestMethod]
     public void ScrabbleConstructor_ReturnsUserInput_String()
     {
-      string userInput = "word";
+      string userInput = "WORD";
       Scrabble userWord = new Scrabble(userInput);
       Assert.AreEqual(userInput, userWord.UserInput);
     }
@@ -30,9 +30,17 @@ namespace ScrabbleScore.Tests
       string userInput = "word";
       Scrabble userWord = new Scrabble(userInput);
       // Act
-      char[] userCharArray = {'w', 'o', 'r', 'd'};
+      char[] userCharArray = {'W', 'O', 'R', 'D'};
       //Assert
       CollectionAssert.AreEqual(userCharArray, userWord.UserCharArray);
+    }
+
+    [TestMethod]
+    public void GetLetterScore_AssignScoresBasedOnLetters_Int ()
+    {
+      string userInput = "word";
+      Scrabble userWord = new Scrabble(userInput);
+      Assert.AreEqual(4, userWord.GetLetterScore(userWord.UserCharArray[0]));
     }
   }
 }
