@@ -30,9 +30,14 @@ namespace ScrabbleScore.Models
       return userCharArray;
     }
 
-    public int GetLetterScore(char letter) {
-      return _letterScores[letter];
-    }
+    public int GetLetterScore() {
+      int totalScore = 0;
+      foreach (char letter in UserCharArray)
+      {
+        totalScore = totalScore + _letterScores[letter];
+      }
 
+      return totalScore;
+    }
   }
 }

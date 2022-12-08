@@ -34,13 +34,13 @@ namespace ScrabbleScore.Tests
       //Assert
       CollectionAssert.AreEqual(userCharArray, userWord.UserCharArray);
     }
-
+    
     [TestMethod]
-    public void GetLetterScore_AssignScoresBasedOnLetters_Int ()
+    public void GetLetterScore_WillReturnTotalScore_Int ()
     {
       string userInput = "word";
       Scrabble userWord = new Scrabble(userInput);
-      Assert.AreEqual(4, userWord.GetLetterScore(userWord.UserCharArray[0]));
+      Assert.AreEqual(8, userWord.GetLetterScore());
     }
   }
 }
