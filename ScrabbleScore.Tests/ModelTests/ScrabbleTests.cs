@@ -9,11 +9,20 @@ namespace ScrabbleScore.Tests
   public class ScrabbleTests
   {
     [TestMethod]
-    public void ScrabbleConstructor_CreatesInstancesOfWord_Item()
+    public void ScrabbleConstructor_CreatesInstancesOfWord_Object()
     {
-      Scrabble userWord = new Scrabble();
+      Scrabble userWord = new Scrabble("word");
       Assert.AreEqual(typeof(Scrabble), userWord.GetType());
     }
+
+    [TestMethod]
+    public void ScrabbleConstructor_ReturnsUserInput_String()
+    {
+      string userInput = "word";
+      Scrabble userWord = new Scrabble(userInput);
+      Assert.AreEqual(userInput, userWord.UserInput);
+    }
+    
     
   }
 }
