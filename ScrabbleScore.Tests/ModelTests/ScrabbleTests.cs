@@ -30,7 +30,7 @@ namespace ScrabbleScore.Tests
       string userInput = "word";
       Scrabble userWord = new Scrabble(userInput);
       // Act
-      string[] userCharArray = {"w", "o", "r", "d"};
+      char[] userCharArray = {'w', 'o', 'r', 'd'};
       //Assert
       CollectionAssert.AreEqual(userCharArray, userWord.UserCharArray);
     }

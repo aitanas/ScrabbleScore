@@ -6,17 +6,17 @@ namespace ScrabbleScore.Models
   public class Scrabble
   {
     public string UserInput { get; }
-    public string[] UserCharArray { get; }
+    public char[] UserCharArray { get; }
     public Scrabble(string userInput)
     {
       UserInput = userInput;
-      UserCharArray = ToCharacterArray();
+      UserCharArray = ToCharacterArray(userInput);
     }
     
-    public string[] ToCharacterArray()
+    public char[] ToCharacterArray(string userInput)
     {
-      // string[] UserCharArray = userCharArray;
-      return new string[] {"w","o","r","d"};
+      char[] userCharArray = userInput.ToCharArray();
+      return userCharArray;
     }
   }
 }
